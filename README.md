@@ -61,6 +61,7 @@ df5=pd.DataFrame(sc3.fit_transform(df1),columns=['id', 'bin_1', 'bin_2', 'City',
 df5
 ```
 ## Encoding.csv
+```
 import pandas as pd
 qf=pd.read_csv("encoding.csv")
 qf
@@ -77,8 +78,10 @@ qf1["bin_1"] = oe.fit_transform(qf1[["bin_1"]])
 qf1["nom_0"] = oe.fit_transform(qf1[["nom_0"]])
 qf1["ord_2"] = oe.fit_transform(qf1[["ord_2"]])
 qf1["bin_2"] = oe.fit_transform(qf1[["bin_2"]])
+```
 
 #feature scaling
+```
 from sklearn.preprocessing import MinMaxScaler
 sc=MinMaxScaler()
 qf0=pd.DataFrame(sc.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
