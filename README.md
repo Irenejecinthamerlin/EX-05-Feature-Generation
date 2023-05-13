@@ -103,6 +103,7 @@ qf4=pd.DataFrame(sc3.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0'
 qf4
 ```
 ## Titanic_dataset.csv
+```
 import pandas as pd
 rf=pd.read_csv("titanic.csv")
 rf
@@ -127,7 +128,7 @@ e1=OrdinalEncoder(categories=[embark])
 rf1['Embarked'] = e1.fit_transform(rf[['Embarked']])
 rf1['Sex'] = oe.fit_transform(rf[['Sex']])
 rf1
-
+```
 #feature scaling
 from sklearn.preprocessing import MinMaxScaler
 sc=MinMaxScaler()
