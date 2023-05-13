@@ -129,7 +129,9 @@ rf1['Embarked'] = e1.fit_transform(rf[['Embarked']])
 rf1['Sex'] = oe.fit_transform(rf[['Sex']])
 rf1
 ```
+
 #feature scaling
+```
 from sklearn.preprocessing import MinMaxScaler
 sc=MinMaxScaler()
 rf0=pd.DataFrame(sc.fit_transform(rf1),columns=['PassengerId', 'Survived', 'Pclass', 'Sex','Age','SibSp','Parch','Fare','Embarked'])
